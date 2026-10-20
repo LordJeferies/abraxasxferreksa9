@@ -1,0 +1,57 @@
+[
+  {
+    "route": "",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "tienda/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "producto/taladro/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "categoria/Herramientas/Perforación/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "checkout/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "cotizaciones/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "cashea/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "sucursales/",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "assets/fonts.css",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "assets/font-0.ttf",
+    "status": "200",
+    "exit": 0
+  },
+  {
+    "route": "assets/herramientas-completas.webp",
+    "status": "200",
+    "exit": 0
+  }
+]

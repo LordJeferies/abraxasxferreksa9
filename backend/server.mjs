@@ -3,6 +3,7 @@ import {readFile,mkdir,rename,writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {randomUUID} from 'node:crypto';
 import {priceCart,validateOrder} from '../shared/commerce.mjs';
+import {checkMeasures,measurementSummary} from '../shared/measurements.ts';
 const catalog=JSON.parse(await readFile(new URL('../shared/catalog.json',import.meta.url),'utf8'));
 export function createApi({storeDir=new URL('./.data/',import.meta.url),origin='http://127.0.0.1:4199'}={}) {
  let queue=Promise.resolve();
@@ -16,9 +17,10 @@ export function createApi({storeDir=new URL('./.data/',import.meta.url),origin='
   try{
    if(req.method==='GET'&&path==='/api/health')return send(200,{ok:true,mode:'demo',paymentsEnabled:false});
    if(req.method==='GET'&&path==='/api/products')return send(200,{products:catalog,mode:'demo'});
-   if(req.method!=='POST'||!['/api/quote','/api/orders'].includes(path))return send(404,{error:'Ruta no disponible.'});
+   if(req.method!=='POST'||!['/api/quote','/api/orders','/api/measurements'].includes(path))return send(404,{error:'Ruta no disponible.'});
    let body='';for await(const chunk of req){body+=chunk;if(Buffer.byteLength(body)>32768)return send(413,{error:'Solicitud demasiado grande.'});}
    let input;try{input=JSON.parse(body);}catch{return send(400,{error:'JSON no válido.'});}
+   if(path==='/api/measurements'){const error=checkMeasures(input);if(error)throw new Error(error);return send(200,{...measurementSummary(input),demo:true,price:null,notice:'Solicitud geométrica. Confirmar medidas, material y disponibilidad con FerreKsa.'});}
    if(path==='/api/quote')return send(200,priceCart(catalog,input.items));
    validateOrder(input);const quote=priceCart(catalog,input.items);
    const order=await serialize(async()=>{await mkdir(new URL('.',file),{recursive:true});let orders=[];try{orders=JSON.parse(await readFile(file,'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}

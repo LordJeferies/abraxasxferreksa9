@@ -1,6 +1,6 @@
 # ABRAXAS FERREKSA 9
 
-Experiencia independiente de FerreKsa: React + TypeScript + Vite, catálogo editorial de demostración, carrito, checkout simulado, cotizaciones por WhatsApp y estudio Three.js/R3F bajo demanda. Las versiones anteriores se mantienen intactas.
+Experiencia independiente de FerreKsa: React + TypeScript + Vite, catálogo editorial de demostración, carrito, checkout simulado, cotizaciones por WhatsApp y configurador de medidas Three.js/R3F bajo demanda. Las versiones anteriores se mantienen intactas.
 
 ## Empezar
 ```bash
@@ -31,7 +31,7 @@ GitHub Pages ejecuta el frontend en modo de demostración local. No puede ejecut
 Inicio; tienda; catálogo; 5 categorías; 9 subcategorías; 9 fichas; búsqueda; selección de ejemplo; favoritos; comparador; carrito; checkout; cotizaciones; Cashea; marcas; servicios; nosotros; sedes; contacto; preguntas; envíos/retiros; privacidad de demo; cambios/devoluciones pendientes; 404.
 
 ## Movimiento y 3D
-Entrada tipográfica del hero, respuestas hover/foco, zoom de ficha, cabecera/resumen sticky y estudio industrial con giro, zoom y acabados de una pieza conceptual. Three se descarga solo al entrar al estudio. DPR limitado, render bajo demanda y fallback estático; pausa y prefers-reduced-motion respetados. No hay modelo GLB comercial ni de Luka.
+Entrada tipográfica del hero, respuestas hover/foco, zoom de ficha, cabecera/resumen sticky y configurador de bloques, láminas y tubos huecos con giro, zoom, medidas, mm/cm/m y cálculo geométrico. Three se descarga solo al activar la vista 3D del cotizador. DPR limitado, render bajo demanda y fallback estático; pausa y prefers-reduced-motion respetados. No hay modelo GLB comercial ni de Luka.
 
 Luka es guía de navegación local con imagen aprobada y mensajes por contexto. No es chatbot, no sigue ojos con rig y no se simula un modelo completo. Véase recursos y límites en docs.
 
@@ -49,3 +49,8 @@ Página ABRAXAS FERREKSA 9; componentes y tokens independientes. Inicio, tienda 
 Catálogo comercial, SKU/marcas/fotos autorizadas, impuestos, stock, políticas, servicio de entrega/retiro, backend de producción, autenticación administrativa, pasarela autorizada y modalidad Cashea. Modelado real y rig de Luka/productos para alcanzar animación 3D comparable a las imágenes publicitarias.
 
 No se garantiza Lighthouse 90+ ni Core Web Vitals de campo sin mediciones. Las pruebas realizadas y sus límites se registran en docs/VERIFICACION.md.
+
+Configurador: /cotizaciones#medidas-3d. La ficha del ejemplo de bloques ofrece acceso directo. Dimensiones configuradas se añaden a la lista y al texto de WhatsApp. Las formas y materiales son ejemplos, no un catálogo de corte a medida confirmado.
+
+## Ampliación del alcance del PDF
+Se incorporaron once referencias de hogar adicionales (20 en total), seis ideas de proyecto y tres guías completas. Las nuevas ilustraciones SVG son genéricas; precios y stock siguen siendo ejemplos. Véase docs/ALCANCE-PDF.md para la matriz de requisitos, contenido pendiente y referencias EPA. La versión 2 mantiene un cotizador 2D sin Three.js; la 9 ofrece 3D opcional para geometrías a medida.

@@ -20,6 +20,7 @@ Sin VITE_API_URL, el sitio calcula la misma demo en el navegador y permite compl
 - GET /api/health: modo demo, pagos desactivados.
 - GET /api/products: catálogo de prueba.
 - POST /api/quote: acepta `{items:[{productId,variant,quantity}]}`; calcula precios desde el catálogo del servidor, ignorando precios enviados por el cliente.
+- POST /api/measurements: recibe forma, medidas, unidad y cantidad; valida geometría, calcula área/volumen y devuelve precio null (no hay tarifa inventada).
 - POST /api/orders: añade `fulfillment: retiro-demo | delivery-demo`, `confirmDemo:true`, `idempotencyKey` UUID/string de 8–80 caracteres.
 - Respuesta: id DEMO, estado simulated, fecha, líneas validadas, precios en céntimos, subtotal, total y aviso de simulación.
 
@@ -38,3 +39,6 @@ Esto es una base local de integración, NO un servidor listo para procesar venta
 
 ## Calidad 3D
 La imagen aprobada de Luka es la fuente visual. No existe un GLB de Luka ni de los productos. Para rig animado: modelado consistente del flexómetro, UV, materiales PBR, rig facial/corporal, animaciones de saludo/atención/celebración y exportación optimizada con KTX2/Draco o Meshopt. Objetivo de peso/calidad a validar con el asset real. No usar el perno conceptual como sustituto de un producto auténtico.
+
+## Medidas en el cotizador
+La geometría paramétrica de bloque/lámina/tubo se calcula con shared/measurements.ts. Cambiar mm/cm/m conserva el tamaño físico. Los tubos tienen diámetro exterior y espesor de pared; el volumen excluye el hueco. El usuario añade la solicitud con todas sus medidas a la cotización; no se deriva un precio sin tarifa y material comerciales. API y frontend comparten la lógica.

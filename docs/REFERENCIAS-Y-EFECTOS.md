@@ -32,3 +32,6 @@ Los costes son presupuestos de diseño, no mediciones de hardware o FPS.
 
 ## Decisiones de contención
 No se despliega Lenis: scroll nativo y navegación por teclado bastan. No se usa cursor global que oculte el puntero, distorsión de producto, zoom infinito, scroll secuestrado ni despieces inventados. Los modelos comerciales 360 y Luka riggeado se activarán cuando haya modelos originales/licenciados de calidad. El perno conceptual no es producto a la venta. Las fotos cinematográficas existentes se reutilizan; esta iteración no altera sus especificaciones para simular un catálogo real.
+
+## Actualización por solicitud del propietario
+Se sustituye la pieza decorativa del hero por acceso al configurador del cotizador. El WebGL activo presenta modelos paramétricos de bloque/lámina/tubo hueco, unidades convertibles, giro, zoom y material orientativo. SVG esquemático como alternativa de bajo coste. Sin precio calculado ni promesa de fabricación. La lista conserva la configuración para WhatsApp. MaterialScene.tsx queda como prototipo previo sin importarse ni descargarse en la versión final.
