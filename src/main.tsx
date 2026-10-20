@@ -1,0 +1,3 @@
+import {Component,type ReactNode} from 'react';import {createRoot} from 'react-dom/client';import App from './App';import './styles.css';
+class ErrorBoundary extends Component<{children:ReactNode},{error:boolean}>{state={error:false};static getDerivedStateFromError(){return {error:true}}render(){return this.state.error?<div className="wrap section"><h1>No pudimos cargar esta vista.</h1><p>Tu navegador puede tener una versión anterior de los archivos.</p><button onClick={()=>location.reload()}>Volver a cargar</button><a href="https://wa.me/584123525139">Contactar por WhatsApp</a></div>:this.props.children}}
+createRoot(document.getElementById('root')!).render(<ErrorBoundary><App/></ErrorBoundary>);
