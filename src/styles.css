@@ -7,3 +7,5 @@
 html[data-motion=paused]{scroll-behavior:auto}html[data-motion=paused] *,html[data-motion=paused] *:before,html[data-motion=paused] *:after{animation:none!important;transition:none!important}
 
 .project-story>*{min-width:0}.story-copy p{max-width:100%}
+
+.luka-dot{position:relative;overflow:hidden;background:#dedede}.luka-dot img{position:absolute;left:0;top:0;width:128px;max-width:none;height:auto;transform:translate(-14px,-21px)}
