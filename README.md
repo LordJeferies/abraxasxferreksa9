@@ -54,3 +54,6 @@ Configurador: /cotizaciones#medidas-3d. La ficha del ejemplo de bloques ofrece a
 
 ## Ampliación del alcance del PDF
 Se incorporaron once referencias de hogar adicionales (20 en total), seis ideas de proyecto y tres guías completas. Las nuevas ilustraciones SVG son genéricas; precios y stock siguen siendo ejemplos. Véase docs/ALCANCE-PDF.md para la matriz de requisitos, contenido pendiente y referencias EPA. La versión 2 mantiene un cotizador 2D sin Three.js; la 9 ofrece 3D opcional para geometrías a medida.
+
+## Reorganización del 20 de octubre
+La landing está en abraxasxferreksa; el sitio completo, en abraxasxferreksa2; la demo con 3D, en abraxasxferreksa9; y la temporal, en abraxasxferreksa0. Las cuatro incluyen tema claro/oscuro. Cotizaciones usa búsqueda, categorías y plantillas editables. Véase docs/REORGANIZACION-20261020.md para alcance y pruebas.
